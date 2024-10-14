@@ -1,16 +1,16 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
-import ProductManager from '../components/ProductManager.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import HomePage from '../views/HomePage.vue';       // Corrected path
+import ProductsPage from '../views/ProductsPage.vue'; // Corrected path
 
 const routes = [
-  { path: '/home', component: Home },
-  { path: '/products', component: ProductManager },
   { path: '/', redirect: '/home' },
-]
+  { path: '/home', component: HomePage },
+  { path: '/products', component: ProductsPage }
+];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes,
-})
+  routes
+});
 
-export default router
+export default router;
