@@ -16,7 +16,7 @@
 export default {
   data() {
     return {
-      products: []  // List of products
+      products: [] 
     };
   },
   methods: {
@@ -30,21 +30,24 @@ export default {
 };
 </script>
 <style scoped>
-  .navbar {
+ .navbar {
   background-color: #007bff;
   padding: 1rem 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
+
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .nav-links {
   list-style: none;
   display: flex;
   gap: 2rem;
 }
+
 .nav-item {
   color: white;
   text-decoration: none;
@@ -53,10 +56,12 @@ export default {
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
 .nav-item:hover {
   background-color: rgba(255, 255, 255, 0.2);
   transform: scale(1.05);
 }
+
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
@@ -80,6 +85,7 @@ export default {
     text-align: center;
   }
 }
+
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -90,5 +96,4 @@ export default {
     transform: translateY(0);
   }
 }
-
 </style>

@@ -17,32 +17,28 @@ export default {
   },
   data() {
     return {
-      products: [], // Your products array
-      currentProduct: null, // Track the current product for editing
+      products: [],
+      currentProduct: null, 
     };
   },
   methods: {
     handleProductSubmit(product) {
       if (product.id) {
-        // If there is an id, update the product
+       
         const index = this.products.findIndex((p) => p.id === product.id);
         if (index !== -1) {
-          this.products.splice(index, 1, product); // Update the product
+          this.products.splice(index, 1, product); 
         }
       } else {
-        // Otherwise, add a new product
-        product.id = Date.now(); // Example to generate a unique ID
+       
+        product.id = Date.now();
         this.products.push(product);
       }
-      this.currentProduct = null; // Reset current product after submission
+      this.currentProduct = null;
     },
     handleEditProduct(product) {
-      this.currentProduct = product; // Set the current product to edit
+      this.currentProduct = product; 
     },
   },
 };
 </script>
-
-<style scoped>
-/* Additional styles if needed */
-</style>

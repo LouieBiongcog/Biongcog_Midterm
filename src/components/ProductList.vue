@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     editProduct(product) {
-      this.$emit('edit-product', product); // Emit the event with the product data
+      this.$emit('edit-product', product); 
     },
   },
 };

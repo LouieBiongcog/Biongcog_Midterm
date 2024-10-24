@@ -13,16 +13,16 @@ export default {
 </script>
 <style>
 .home-page {
-  background-image: url('../assets/bg1-transformed.png'); /* Ensure the path is correct */
-  background-size: cover; /* Cover the entire area */
-  background-position: center; /* Center the image */
-  height: 100vh; /* Full viewport height */
-  color: white; /* Text color for contrast */
-  display: flex; /* Enable flexbox */
-  flex-direction: column; /* Arrange items in a column */
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-  text-align: center; /* Center text */
-  padding: 20px; /* Add some padding */
+  background-image: url('../assets/bg1-transformed.png'); 
+  background-size: cover; 
+  background-position: center; 
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
 </style>

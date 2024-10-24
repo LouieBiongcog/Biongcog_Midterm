@@ -1,4 +1,3 @@
-<!-- src/components/ProductForm.vue -->
 <template>
   <div class="product-form-container">
     <h2 class="form-title">{{ isEditing ? 'Edit Product' : 'Add Product' }}</h2>
@@ -19,12 +18,12 @@ export default {
   data() {
     return {
       product: {
-        id: null, // Add an id field to track the product being edited
+        id: null,
         name: '',
-        price: '',
+        price: '₱',
         description: '',
       },
-      isEditing: false, // Track if the form is in edit mode
+      isEditing: false, 
     };
   },
   watch: {
@@ -32,19 +31,19 @@ export default {
       handler(newValue) {
         if (newValue) {
           this.product = { ...newValue };
-          this.isEditing = true; // Set to true when in edit mode
+          this.isEditing = true; 
         }
       },
-      immediate: true, // Trigger the watch immediately
+      immediate: true, 
     },
   },
   methods: {
     handleSubmit() {
-      this.$emit('submit-product', this.product); // Emit product data
-      this.resetForm(); // Reset form after submission
+      this.$emit('submit-product', this.product); 
+      this.resetForm(); 
     },
     resetForm() {
-      this.product = { id: null, name: '', price: '', description: '' };
+      this.product = { id: null, name: '', price: '₱', description: '' };
       this.isEditing = false;
     },
   },
@@ -55,56 +54,56 @@ export default {
 .product-form-container {
   width: 100%;
   max-width: 400px;
-  margin: 0 auto;
-  padding: 2rem; /* Increased padding for a more spacious feel */
-  background: linear-gradient(135deg, #e0f7fa, #ffffff); /* Beautiful gradient */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Deeper shadow for a more pronounced effect */
-  transition: transform 0.3s ease; /* Smooth transform effect */
+  margin: 2rem auto 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .product-form-container:hover {
-  transform: scale(1.02); /* Slight scale effect on hover */
+  transform: scale(1.02);
 }
 
 .form-title {
-  text-align: center; /* Center title */
-  font-size: 1.5rem; /* Title size */
-  color: #00796b; /* Color for title */
-  margin-bottom: 1rem; /* Space below title */
+  text-align: center;
+  font-size: 1.5rem;
+  color: #00796b;
+  margin-bottom: 1rem;
 }
 
 form {
   display: flex;
-  flex-direction: column; /* Stack inputs vertically */
+  flex-direction: column;
 }
 
 input,
 textarea {
-  padding: 0.8rem; /* Padding for inputs */
-  margin-bottom: 1rem; /* Space below inputs */
-  border: 1px solid #ccc; /* Light border */
-  border-radius: 6px; /* Rounded input corners */
-  transition: border 0.3s ease; /* Transition effect for border */
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s ease;
 }
 
 input:focus,
 textarea:focus {
-  border-color: #00796b; /* Change border color on focus */
-  outline: none; /* Remove default outline */
+  border-color: #00796b;
+  outline: none;
 }
 
 .submit-button {
-  padding: 0.8rem; /* Padding for button */
-  background-color: #00796b; /* Button color */
-  color: white; /* Text color */
-  border: none; /* No border */
-  border-radius: 6px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s ease; /* Transition for background color */
+  padding: 0.8rem;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
-  background-color: #004d40; /* Darker button color on hover */
+  background-color: #004d40;
 }
 </style>
